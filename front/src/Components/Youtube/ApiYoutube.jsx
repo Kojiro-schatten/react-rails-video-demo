@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import config from './config.js'
+import numeral from 'numeral'
 
 // const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 
@@ -12,13 +13,17 @@ const YoutubeCounter = () => {
     fetch(apiCall)
       .then(result => result.json())
       .then(data => {
-        const count = data.items[0].statistics.subscriberCount
+        // numeralの表記設定 http://numeraljs.com/
+        const count = numeral(data.items[0].statistics.subscriberCount).format('0,0');
         setSubscriberCount(count);
       })
   });
-  return <div>{subscribeCount}</div>
+  return(
+    <div>
+      <h2>React Conf has {subscribeCount} subscribers!</h2>
+      <div>From here, you can watch any videos created by React Conf</div>
+    </div>
+  ) 
 }
 
 export default YoutubeCounter;
-
-// https://www.googleapis.com/youtube/v3...}
