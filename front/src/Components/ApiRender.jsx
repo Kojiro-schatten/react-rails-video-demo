@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { StyledApiRender } from './styles/StyledApiRender'
+import Spinner from 'react-spinner-material'
  
 function ApiRender() {
   const [data, setData] = useState({ hits: [] });
@@ -8,12 +9,15 @@ function ApiRender() {
   const [url, setUrl] = useState(
     'http://hn.algolia.com/api/v1/search?query=redux',   
   );
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
+      setIsLoading(true);
       const result = await axios(url);
 
       setData(result.data);
+      setIsLoading(false)
     } 
     // fetchDataでfetchを忘れないように...
     fetchData();
@@ -35,13 +39,23 @@ function ApiRender() {
       }>
         Search
       </button>
-      <ul>
-        {data.hits.map(item => (
-          <li className="ApiRenderItem" key={item.objectID}>
-            <a href={item.url}>{item.title}</a>
-          </li>
-        ))}
-      </ul>
+      {isLoading ? (
+      <div style={{
+        textAlign: "center",
+        position: "relative",
+        left: "45%"
+      }}>
+        <Spinner radius={60} color={"#333"} stroke={2} visible={true} />
+      </div>
+      ) : (
+        <ul>
+          {data.hits.map(item => (
+            <li className="ApiRenderItem" key={item.objectID}>
+              <a href={item.url}>{item.title}</a>
+            </li>
+          ))}
+        </ul>
+      )}
     </StyledApiRender>
   );
 }
