@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import update from 'react-addons-update'
 import ApiRender from './ApiRender'
+import YoutubeCounter from './Youtube/ApiYoutube';
 
 class MainContainer extends React.Component {
   constructor(props) {
@@ -72,6 +73,7 @@ class MainContainer extends React.Component {
         </div>
         <div className="apiRender">
           <ApiRender />
+          <YoutubeCounter />
         </div>
       </div>
     );
