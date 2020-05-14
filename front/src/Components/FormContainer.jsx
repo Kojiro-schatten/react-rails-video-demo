@@ -1,25 +1,25 @@
-import React from 'react'
-import {Button,FormGroup,FormControl} from 'react-bootstrap'
-import { StyledFormContainer } from './styles/StyledFormContainer';
+import React from "react";
+import { Button, FormGroup, FormControl } from "react-bootstrap";
+import { StyledFormContainer } from "./styles/StyledFormContainer";
 class FormContainer extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      product: ''
-    }
+      product: "",
+    };
   }
 
   onChangetext(e) {
-    this.setState({product: e.target.value})
+    this.setState({ product: e.target.value });
   }
 
   hundleSubmit = () => {
-    this.props.createProduct(this.state.product)
-    this.setState({product:''})
-  }
+    this.props.createProduct(this.state.product);
+    this.setState({ product: "" });
+  };
 
-  render(){
-    return(
+  render() {
+    return (
       <StyledFormContainer>
         <form>
           <FormGroup controlId="formBasicText">
@@ -27,15 +27,20 @@ class FormContainer extends React.Component {
               type="text"
               value={this.state.product}
               placeholder="Enter text"
-              onChange={ e => this.onChangetext(e)}
+              onChange={(e) => this.onChangetext(e)}
             />
           </FormGroup>
-
         </form>
-        <Button className="tweetButton" type="submit" onClick={this.hundleSubmit}>Tweet!</Button>
+        <Button
+          className="tweetButton"
+          type="submit"
+          onClick={this.hundleSubmit}
+        >
+          Tweet!
+        </Button>
       </StyledFormContainer>
-    )
+    );
   }
 }
 
-export default FormContainer
+export default FormContainer;
