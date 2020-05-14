@@ -1,29 +1,21 @@
 import React from 'react'
 import ViewProduct from './ViewProduct'
 import styled from 'styled-components'
-
+import { StyledProductsContainer } from './styles/StyledProductsContainer';
 class ProductsContainer extends React.Component {
   render() {
     return(
-      <div className='productList'>
-         {this.props.productData.map((data) => {
-           return(
-            <ViewProduct data={data} key={data.id} onDelete={this.props.deleteProduct} onUpdate={this.props.updateProduct}/>
-           )
-         })}
-      </div>
+      <StyledProductsContainer>
+        <div className='productList'>
+          {this.props.productData.map((data) => {
+            return(
+              <ViewProduct data={data} key={data.id} onDelete={this.props.deleteProduct} onUpdate={this.props.updateProduct}/>
+            )
+          })}
+        </div>
+      </StyledProductsContainer>
     )
   }
 }
-
-// const ProductsContainer = props => {
-//   const [productData, setProductData] = useState(null) 
-//   useEffect(() => {
-//   function 
-// })
-//   return(
-//     <ViewProduct data={data} key={data.id} onDelete={this.props.deleteProduct} onUpdate={this.props.updateProduct}/>
-//   )
-// }
 
 export default ProductsContainer

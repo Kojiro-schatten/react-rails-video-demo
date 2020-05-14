@@ -42,10 +42,22 @@
   height: auto;
   display: flex;
   justify-content: space-around;
+  margin: 10px 0;
+}
+
+@media screen and (max-width:780px) {
+  .app-main {
+    flex-direction: column;
+  }
 }
 
 .deleteButton {
-  padding: 10px;
-  font-size: 20px;
-  color: red;
+  padding: 5px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.btn-primary {
+  padding: 8px 4px;
+  margin: 4px 4px;
 }

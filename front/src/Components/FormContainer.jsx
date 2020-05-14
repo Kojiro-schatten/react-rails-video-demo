@@ -1,5 +1,7 @@
 import React from 'react'
 import {Button,FormGroup,FormControl} from 'react-bootstrap'
+import styled from 'styled-components'
+import { StyledFormContainer } from './styles/StyledFormContainer';
 class FormContainer extends React.Component {
   constructor(props) {
     super(props)
@@ -19,7 +21,7 @@ class FormContainer extends React.Component {
 
   render(){
     return(
-      <div>
+      <StyledFormContainer>
         <form>
           <FormGroup controlId="formBasicText">
             <FormControl
@@ -31,8 +33,8 @@ class FormContainer extends React.Component {
           </FormGroup>
 
         </form>
-      <Button type="submit" onClick={this.hundleSubmit}>つぶやく</Button>
-      </div>
+        <Button className="tweetButton" type="submit" onClick={this.hundleSubmit}>Tweet!</Button>
+      </StyledFormContainer>
     )
   }
 }

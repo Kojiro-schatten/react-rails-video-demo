@@ -1,6 +1,7 @@
 import React from 'react'
 import {Button} from 'react-bootstrap'
-
+import styled from 'styled-components'
+import { StyledViewProduct } from './styles/StyledViewProduct';
 
 class ViewProduct extends React.Component {
   constructor(props) {
@@ -24,16 +25,16 @@ class ViewProduct extends React.Component {
 
   render() {
     return(
-      <div>
+      <StyledViewProduct>
         <span>{this.props.data.product}</span>
-        <span className='deleteButton' onClick={this.handleDelete}>X</span>
+        <Button className='deleteButton' onClick={this.handleDelete}>delete</Button>
         <span>
           <input type="text" value={this.state.updateText} onChange={e => this.handleInput(e)} />
         </span>
         <span>
-          <Button type="submit" onClick={this.handleUpdate}>更新！</Button>
+          <Button type="submit" onClick={this.handleUpdate}>update</Button>
         </span>
-      </div>
+      </StyledViewProduct>
     )
   }
 }

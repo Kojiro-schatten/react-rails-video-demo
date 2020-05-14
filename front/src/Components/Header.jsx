@@ -6,7 +6,7 @@ const Header = () => {
   return(
     <StyledHeader>
       <div className="header-content">
-        Header
+        Welcome to React Builder.
       </div>
     </StyledHeader>
   )
