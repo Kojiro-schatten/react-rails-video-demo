@@ -1,6 +1,5 @@
 import React from 'react'
 import {Button} from 'react-bootstrap'
-import styled from 'styled-components'
 import { StyledViewProduct } from './styles/StyledViewProduct';
 
 class ViewProduct extends React.Component {

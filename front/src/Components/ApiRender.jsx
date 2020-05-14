@@ -5,12 +5,15 @@ import { StyledApiRender } from './styles/StyledApiRender'
 function ApiRender() {
   const [data, setData] = useState({ hits: [] });
  
-  useEffect(async () => {
-    const result = await axios(
-      'https://hn.algolia.com/api/v1/search?query=redux',
-    );
- 
-    setData(result.data);
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios(
+        'https://hn.algolia.com/api/v1/search?query=redux',
+        );
+      setData(result.data);
+    } 
+    // fetchDataでfetchを忘れないように...
+    fetchData();
   }, []);
  
   return (

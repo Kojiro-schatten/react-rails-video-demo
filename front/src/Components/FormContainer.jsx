@@ -1,6 +1,5 @@
 import React from 'react'
 import {Button,FormGroup,FormControl} from 'react-bootstrap'
-import styled from 'styled-components'
 import { StyledFormContainer } from './styles/StyledFormContainer';
 class FormContainer extends React.Component {
   constructor(props) {

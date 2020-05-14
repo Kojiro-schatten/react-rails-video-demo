@@ -1,6 +1,5 @@
 import React from 'react'
 import ViewProduct from './ViewProduct'
-import styled from 'styled-components'
 import { StyledProductsContainer } from './styles/StyledProductsContainer';
 class ProductsContainer extends React.Component {
   render() {
