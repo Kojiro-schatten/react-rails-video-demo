@@ -1,6 +1,5 @@
 import React from 'react'
 import {Button,FormGroup,FormControl} from 'react-bootstrap'
-
 class FormContainer extends React.Component {
   constructor(props) {
     super(props)

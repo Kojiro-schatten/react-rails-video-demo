@@ -5,12 +5,13 @@ import FormContainer from './FormContainer'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import update from 'react-addons-update'
+import ApiRender from './ApiRender'
 
 class MainContainer extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      products: []
+      products: [],
     }
   }
 
@@ -64,9 +65,14 @@ class MainContainer extends React.Component {
 
   render() {
     return (
-      <div className='app-main'>
-        <FormContainer  handleAdd={this.handleAdd} createProduct={this.createProduct}/>
-        <ProductsContainer productData={this.state.products} deleteProduct={this.deleteProduct} updateProduct={this.updateProduct}/>
+      <div>
+        <div className='app-main'>
+          <FormContainer handleAdd={this.handleAdd} createProduct={this.createProduct}/>
+          <ProductsContainer productData={this.state.products} deleteProduct={this.deleteProduct} updateProduct={this.updateProduct}/>
+        </div>
+        <div className="apiRender">
+          <ApiRender />
+        </div>
       </div>
     );
   }
