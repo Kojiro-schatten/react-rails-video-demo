@@ -1,30 +1,32 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useReducer } from 'react'
 import axios from 'axios';
+import dataFetchReducer from './useDataReducer';
 
 const useHackerNewsApi = (initialUrl, initialData) => {
   const [data, setData] = useState(initialData);
   const [url, setUrl] = useState(initialUrl);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
+  const [state, dispatch] = useReducer(dataFetchReducer, {
+    isLoading: false,
+    isError: false,
+    data: initialData,
+  });
 
   useEffect(() => {
     const fetchData = async () => {
-      setIsError(false);
-      setIsLoading(true);
+      dispatch({ type: 'FETCH_INIT'})
       try {
         const result = await axios(url)
-        setData(result.data);
+        dispatch({ type: 'FETCH_SUCCESS', payload: result.data })
       } catch (error) {
-        setIsError(true);
+        dispatch({ type: 'FETCH_FAILURE' })
       }
-      setIsLoading(false)
     } 
     // fetchDataでfetchを忘れないように...
     fetchData();
     // 副作用は search に依存させる
   }, [url]);
 
-  return [{ data, isLoading, isError }, setUrl];
+  return [state, setUrl];
 }
 
 export default useHackerNewsApi
