@@ -5,7 +5,7 @@ const Header = () => {
   return(
     <StyledHeader>
       <div className="header-content">
-        Welcome to React Builder.
+        Welcome to React Search Box.
       </div>
     </StyledHeader>
   )

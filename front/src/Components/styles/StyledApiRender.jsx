@@ -8,6 +8,7 @@ max-width: 768px;
 margin: 0 auto;
   .ApiRenderItem {
     list-style: none;
+    text-align: left;
   }
 }
 `;
