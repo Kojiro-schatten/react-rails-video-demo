@@ -1,44 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 import { StyledApiRender } from './styles/StyledApiRender'
 import Spinner from 'react-spinner-material'
- 
+import useHackerNewsApi from './UseHacker'
+
 function ApiRender() {
-  const [data, setData] = useState({ hits: [] });
   const [query, setQuery] = useState('redux')
-  const [url, setUrl] = useState(
-    'http://hn.algolia.com/api/v1/search?query=redux',   
+  const [{ data, isLoading, isError }, doFetch] = useHackerNewsApi(
+    'http://hn.algolia.com/api/v1/search?query=redux',
+    { hits: [] },
   );
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
-      const result = await axios(url);
-
-      setData(result.data);
-      setIsLoading(false)
-    } 
-    // fetchDataでfetchを忘れないように...
-    fetchData();
-    // 副作用は search に依存させる
-  }, [url]);
  
   return (
     <StyledApiRender>
-      <input 
-        type="text"
-        value={query}
-        onChange={event => setQuery(event.target.value)}
-      />
-      {/* 副作用はインプットフィールドで一文字入力するたびに更新される query state ではなく search state に依存させる */}
-      <button 
-        type="button" 
-        onClick={() => 
-          setUrl(`http://hn.algolia.com/api/v1/search?query=${query}`)
-      }>
-        Search
-      </button>
+      <form onSubmit={event => {
+        doFetch(`http://hn.algolia.com/api/v1/search?query=${query}`);
+        event.preventDefault();
+      }}>
+        <input 
+          type="text"
+          value={query}
+          onChange={event => setQuery(event.target.value)}
+          />
+        {/* 副作用はインプットフィールドで一文字入力するたびに更新される query state ではなく search state に依存させる */}
+        <button type="submit">Search</button>
+      </form>
+
+      {isError && <div>ERROR!</div>}
       {isLoading ? (
       <div style={{
         textAlign: "center",
