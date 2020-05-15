@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { StyledApiRender } from "./styles/StyledApiRender";
 import Spinner from "react-spinner-material";
-import useHackerNewsApi from "./UseHacker";
+import useHackerNewsApi from "./useHacker";
 
 function ApiRender() {
-  const [query, setQuery] = useState("redux");
+  const [query, setQuery] = useState("react");
   const [
     { data, isLoading, isError },
     doFetch,

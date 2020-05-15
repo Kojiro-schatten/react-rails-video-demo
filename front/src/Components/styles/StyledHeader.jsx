@@ -1,20 +1,58 @@
 import styled from 'styled-components';
 
 export const StyledHeader = styled.div`
-background: #1c1c1c;
-padding: 0 15px;
-box-sizing: border-box;
+border-radius: 16px;
+background: #F5F5F5;
+box-shadow:  -10px 10px 23px #dadada, 
+             10px -10px 23px #ffffff;
+color: #919191;
+
 .header-content {
-  color: #ffffff;
-  font-size: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.header-left {
+  border-radius: 8px;
+  background: #F5F5F5;
+  position: relative;
+  left: 20px;
+  box-shadow: -10px 10px 24px #d5d5d5, 10px -10px 24px #ffffff;
+}
+
+.header-left:hover {
+  box-shadow: inset -10px 10px 19px #d5d5d5, 
+  inset 10px -10px 19px #ffffff;
+}
+
+.header-right {
+  border-radius: 32px;
+  background: #F5F5F5;
+  box-shadow: -10px 10px 11px #d5d5d5, 10px -10px 24px #ffffff;
+  }
+
+.header-left a, .header-right a {
+  color: #919191;
+  display: inline-block;
+  padding: 12px 50px;
+  list-style: none;
+  text-decoration: none;
+}
+
+.header-left a:hover ~ .header-left {
+}
+
+.header-center-text {
+  font-size: 24px;
   max-width: 1280px;
-  min-height: 100px;
-  padding: 20px 0px;
+  min-height: 60px;
+  padding: 10px 0px;
   margin: 0 auto;
   box-sizing: border-box;
   @media screen and (max-width: 500px) {
     max-width: 1280px;
     min-height: 0px;
   }
+
 }
 `;
