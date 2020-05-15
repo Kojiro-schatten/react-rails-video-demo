@@ -23,10 +23,11 @@ function ApiRender() {
         <input
           type="text"
           value={query}
+          className="searchButton"
           onChange={(event) => setQuery(event.target.value)}
         />
         {/* 副作用はインプットフィールドで一文字入力するたびに更新される query state ではなく search state に依存させる */}
-        <button type="submit">Search</button>
+        <button type="submit" className="searchClickButton">Search</button>
       </form>
 
       {isError && <div>ERROR!</div>}

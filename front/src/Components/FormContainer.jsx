@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, FormGroup, FormControl } from "react-bootstrap";
+import { FormGroup, FormControl } from "react-bootstrap";
 import { StyledFormContainer } from "./styles/StyledFormContainer";
 class FormContainer extends React.Component {
   constructor(props) {
@@ -28,16 +28,17 @@ class FormContainer extends React.Component {
               value={this.state.product}
               placeholder="Enter text"
               onChange={(e) => this.onChangetext(e)}
+              className="searchButton"
             />
           </FormGroup>
         </form>
-        <Button
+        <button
           className="tweetButton"
           type="submit"
           onClick={this.hundleSubmit}
         >
           Tweet!
-        </Button>
+        </button>
       </StyledFormContainer>
     );
   }

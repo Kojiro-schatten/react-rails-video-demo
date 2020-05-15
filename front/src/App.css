@@ -12,6 +12,10 @@
   pointer-events: none;
 }
 
+button:focus, input:focus {
+	outline:0;
+}
+
 a:hover {
   transition: all .5s ease-out;
 }

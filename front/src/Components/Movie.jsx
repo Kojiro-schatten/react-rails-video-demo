@@ -1,5 +1,4 @@
 import React from 'react'
-import ApiRender from './ApiRender';
 import YoutubeCounter from './Youtube/ApiYoutube';
 
 const Movie = () => {

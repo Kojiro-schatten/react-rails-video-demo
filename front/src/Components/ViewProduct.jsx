@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 import { StyledViewProduct } from "./styles/StyledViewProduct";
 
 class ViewProduct extends React.Component {
@@ -26,20 +25,21 @@ class ViewProduct extends React.Component {
     return (
       <StyledViewProduct>
         <span>{this.props.data.product}</span>
-        <Button className="deleteButton" onClick={this.handleDelete}>
+        <button type="button" className="deleteButton" onClick={this.handleDelete}>
           delete
-        </Button>
+        </button>
         <span>
           <input
+            className="updateTextButton"
             type="text"
             value={this.state.updateText}
             onChange={(e) => this.handleInput(e)}
           />
         </span>
         <span>
-          <Button type="submit" onClick={this.handleUpdate}>
+          <button type="submit" className="updateButton" onClick={this.handleUpdate}>
             update
-          </Button>
+          </button>
         </span>
       </StyledViewProduct>
     );
