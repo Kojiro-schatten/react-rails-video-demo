@@ -11,7 +11,9 @@ const Header = () => {
         </div>
         <p className="header-center-text">Welcome to React Search Box.</p>
         <div className="header-right">
-          <Link to="/">4U</Link>
+          <Link to="/movie">MOVIE</Link>
+          <Link to="/movie">MOVIE</Link>
+          <Link to="/movie">MOVIE</Link>
         </div>
 
       </div>
