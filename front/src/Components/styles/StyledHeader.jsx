@@ -25,24 +25,16 @@ color: #919191;
   inset 10px -10px 19px #ffffff;
 }
 
-.header-right {
-
-}
-
-.header-left a {
+.header-left a, .header-right a {
   color: #919191;
   display: inline-block;
   padding: 12px 50px;
   list-style: none;
   text-decoration: none;
+
 }
 
 .header-right a {
-  color: #919191;
-  display: inline-block;
-  padding: 12px 50px;
-  list-style: none;
-  text-decoration: none;
   border-radius: 32px;
   background: #F5F5F5;
   box-shadow: -10px 10px 19px #d5d5d5, 10px -10px 24px #ffffff;
@@ -67,8 +59,12 @@ color: #919191;
   left: 9%;
   line-height: 40px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 780px) {
   max-width: 1280px;
   min-height: 0px;
+  .header-center-text {
+    font-size: 18px;
+    left: 5%
+  }
 }
 `;
