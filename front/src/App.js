@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import Header from "./Components/Header";
+import Footer from './Components/Footer'
 import MainContainer from "./Components/MainContainer";
 import Movie from './Components/Movie'
 import NotFound from './NotFound'
@@ -18,6 +19,7 @@ class App extends Component {
             <Route exact path="/movie" component={Movie} />
             <Route component={NotFound} />
           </Switch>
+          <Footer />
         </BrowserRouter>
       </div>
     );
