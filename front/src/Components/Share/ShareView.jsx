@@ -1,12 +1,12 @@
 import React, { useState, useCallback } from 'react'
-
+import { StyledShareView } from '../styles/Share/StyledShareView'
 
 const ShareView = () => {
   // ステートを定義
   const [state, setState] = useState({
     tab: 'panel1',
   });
-  
+
   const handleClick = useCallback((event) => {
     // イベント発生源の要素を取得
     const element = event.currentTarget;
@@ -20,14 +20,14 @@ const ShareView = () => {
     });
   }, []);
   return (
-    <div>
+    <StyledShareView>
       <ul role="tablist">
         <li role="presentation">
           <button role="tab"
                   aria-controls="panel1"
                   aria-selected={state.tab === 'panel1'}
                   onClick={handleClick}>
-            カベルネ・ソーヴィニョン
+            Tab1
           </button>
         </li>
         <li role="presentation">
@@ -35,7 +35,7 @@ const ShareView = () => {
                   aria-controls="panel2"
                   aria-selected={state.tab === 'panel2'}
                   onClick={handleClick}>
-            メルロー
+            Tab2
           </button>
         </li>
         <li role="presentation">
@@ -43,7 +43,7 @@ const ShareView = () => {
                   aria-controls="panel3"
                   aria-selected={state.tab === 'panel3'}
                   onClick={handleClick}>
-            ピノ・ノワール
+            Tab3
           </button>
         </li>
       </ul>
@@ -62,7 +62,7 @@ const ShareView = () => {
            aria-hidden={state.tab !== 'panel3'}>
         ピノ・ノワールはブドウの一品種。カベルネ・ソーヴィニョンと対照的で比較的軽口な味わいです。
       </div>
-    </div>
+    </StyledShareView>
   ) 
 } 
 

@@ -74,16 +74,3 @@ a:hover {
   max-width: 180px; 
 }
 
-/* UI制御のための指定 */
-[aria-hidden="true"] {
-  display: none;
-}
-
-[aria-hidden="false"] {
-  display: block;
-}
-
-[aria-selected="true"] {
-  background-color: royalblue;
-  color: white;
-}
