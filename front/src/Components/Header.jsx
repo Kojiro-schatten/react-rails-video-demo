@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledHeader } from "./styles/StyledHeader";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -15,7 +15,6 @@ const Header = () => {
           <Link to="/movie">MOVIE</Link>
           <Link to="/movie">MOVIE</Link>
         </div>
-
       </div>
     </StyledHeader>
   );

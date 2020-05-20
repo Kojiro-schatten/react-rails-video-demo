@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch} from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "./Components/Header";
-import Footer from './Components/Footer'
+import Footer from "./Components/Footer";
 import MainContainer from "./Components/MainContainer";
-import Movie from './Components/Movie'
-import NotFound from './NotFound'
+import Movie from "./Components/Movie";
+import NotFound from "./NotFound";
 import "./App.css";
 
 class App extends Component {

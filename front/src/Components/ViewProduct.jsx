@@ -25,7 +25,11 @@ class ViewProduct extends React.Component {
     return (
       <StyledViewProduct>
         <span>{this.props.data.product}</span>
-        <button type="button" className="deleteButton" onClick={this.handleDelete}>
+        <button
+          type="button"
+          className="deleteButton"
+          onClick={this.handleDelete}
+        >
           delete
         </button>
         <span>
@@ -37,7 +41,11 @@ class ViewProduct extends React.Component {
           />
         </span>
         <span>
-          <button type="submit" className="updateButton" onClick={this.handleUpdate}>
+          <button
+            type="submit"
+            className="updateButton"
+            onClick={this.handleUpdate}
+          >
             update
           </button>
         </span>

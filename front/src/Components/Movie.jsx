@@ -1,12 +1,10 @@
-import React from 'react'
-import YoutubeCounter from './Youtube/ApiYoutube';
+import React from "react";
+import YoutubeCounter from "./Youtube/ApiYoutube";
 
 const Movie = () => {
   return (
-    <div className="apiRender">
-      <YoutubeCounter />
-    </div>
-  )
-}
+    <YoutubeCounter />
+  );
+};
 
 export default Movie;

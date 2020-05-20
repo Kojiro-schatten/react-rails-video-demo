@@ -3,7 +3,6 @@ import axios from "axios";
 import dataFetchReducer from "./useDataReducer";
 
 const useHackerNewsApi = (initialUrl, initialData) => {
-  const [data, setData] = useState(initialData);
   const [url, setUrl] = useState(initialUrl);
   const [state, dispatch] = useReducer(dataFetchReducer, {
     isLoading: false,

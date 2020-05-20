@@ -5,12 +5,12 @@ import useHackerNewsApi from "./useHacker";
 
 function ApiRender() {
   const [query, setQuery] = useState("react");
-  const [
-    { data, isLoading, isError },
-    doFetch,
-  ] = useHackerNewsApi("http://hn.algolia.com/api/v1/search?query=redux", {
-    hits: [],
-  });
+  const [{ data, isLoading, isError }, doFetch] = useHackerNewsApi(
+    "http://hn.algolia.com/api/v1/search?query=redux",
+    {
+      hits: [],
+    }
+  );
 
   return (
     <StyledApiRender>
@@ -27,7 +27,9 @@ function ApiRender() {
           onChange={(event) => setQuery(event.target.value)}
         />
         {/* 副作用はインプットフィールドで一文字入力するたびに更新される query state ではなく search state に依存させる */}
-        <button type="submit" className="searchClickButton">Search</button>
+        <button type="submit" className="searchClickButton">
+          Search
+        </button>
       </form>
 
       {isError && <div>ERROR!</div>}
