@@ -10,7 +10,7 @@ export const VideoDetail = ({ video }) => {
   return (
     <StyledVideoDetails>
       <div className="embed">
-        <iframe width="100%" title="aaa" height="315" src={videoUrl} />
+        <iframe width="100%" title={video.snippet.title} height="415" src={videoUrl} />
       </div>
       <div className="segment">
         <h4 className="header">{video.snippet.title}</h4>

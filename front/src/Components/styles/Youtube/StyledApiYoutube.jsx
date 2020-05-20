@@ -11,6 +11,19 @@ color: #919191;
 .row {
   display: flex;
 }
+
+@media screen and (min-width: 1081px) {
+  .videoDetail{
+    width: 72%;
+    margin: 0 6px;
+  }
+
+  .videoList{
+    width: 28%;
+    margin: 0 6px;
+  }
+}
+
 @media screen and (max-width: 1080px) {
   max-width: 780px;
 

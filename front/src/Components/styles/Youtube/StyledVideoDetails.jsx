@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledVideoDetails = styled.div`
-
-.header {
+.segment {
   text-align: left;
 }
 
