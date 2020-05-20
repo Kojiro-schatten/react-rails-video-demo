@@ -4,6 +4,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import MainContainer from "./Components/MainContainer";
 import Movie from "./Components/Movie";
+import Share from "./Components/Share";
 import NotFound from "./NotFound";
 import "./App.css";
 
@@ -17,6 +18,7 @@ class App extends Component {
             {/* 以下にRails*Ajax通信をする */}
             <Route exact path="/" component={MainContainer} />
             <Route exact path="/movie" component={Movie} />
+            <Route exact path="/share" component={Share} />
             <Route component={NotFound} />
           </Switch>
           <Footer />

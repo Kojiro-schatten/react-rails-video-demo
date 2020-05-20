@@ -12,7 +12,7 @@ const Header = () => {
         <p className="header-center-text">Welcome to React Search Box.</p>
         <div className="header-right">
           <Link to="/movie">MOVIE</Link>
-          <Link to="/movie">MOVIE</Link>
+          <Link to="/share">SHARE</Link>
           <Link to="/movie">MOVIE</Link>
         </div>
       </div>

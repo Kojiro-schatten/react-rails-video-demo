@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledVideoDetails } from '../styles/StyledVideoDetails'
+import { StyledVideoDetails } from "../styles/Youtube/StyledVideoDetails";
 export const VideoDetail = ({ video }) => {
   if (!video) {
     return <div>Waiting...</div>;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import config from './config.js'
 import numeral from 'numeral'
-import { StyledApiYoutube } from '../styles/StyledApiYoutube'
+import { StyledApiYoutube } from '../styles/Youtube/StyledApiYoutube'
 // keyとbaseURLの導入
 import youtube, { KEY } from './youtube.js'
 import { SearchBar } from './SearchBar.jsx'
