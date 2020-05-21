@@ -5,7 +5,7 @@ margin-top: 20px;
 
 [role="tablist"] {
   display: flex;
-  
+  justify-content: space-evenly;
 }
 
 [role="presentation"] {
@@ -38,4 +38,9 @@ button {
   background: #F5F5F5;
   box-shadow: -10px 10px 19px #d5d5d5, 10px -10px 24px #ffffff;
 }
+
+#panel2 .geIkHS {
+  display: none;
+}
+
 `;

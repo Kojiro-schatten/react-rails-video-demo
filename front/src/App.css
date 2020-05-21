@@ -12,8 +12,13 @@
   pointer-events: none;
 }
 
-button:focus, input:focus {
+button:focus, input:focus, textarea:focus {
 	outline:0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 a:hover {
