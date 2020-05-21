@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react'
 import { StyledShareView } from '../styles/Share/StyledShareView'
 import SelectComponent from './SelectComponent'
-// import SharedComponent from './SharedComponent'
 
 const ShareView = () => {
   const [state, setState] = useState({
