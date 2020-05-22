@@ -28,4 +28,8 @@ box-sizing: border-box;
     background: #F5F5F5;
     box-shadow: -5px 1px 45px #d5d5d5, 5px 0px 24px #ffffff;
   }
+  button:active, input:focus, textarea:focus {
+    transition: all .2s ease-in;
+    box-shadow: inset -10px 10px 19px #d5d5d5, inset 10px -10px 19px #ffffff;
+  }
 `;
