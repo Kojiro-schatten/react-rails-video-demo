@@ -5,8 +5,7 @@ const Navigation = () => {
   const [shares, setShares] = useContext(ShareContext)
   return (
     <nav className="selectedNav">
-      <h3>Dev Ed</h3>
-      <p>List of Movies: {shares.length}</p>
+      <h3>Congrats! Already {shares.length} are shared!</h3>
     </nav>
   )
 }
