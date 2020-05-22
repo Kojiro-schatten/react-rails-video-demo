@@ -45,6 +45,11 @@ color: #919191;
   inset 10px -10px 19px #ffffff;
 }
 
+a:focus, a:active {
+  transition: all .2s ease-in;
+  box-shadow: inset -10px 10px 19px #d5d5d5, inset 10px -10px 19px #ffffff;
+}
+
 
 .header-center-text {
   font-size: 18px;

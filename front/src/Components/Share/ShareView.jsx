@@ -1,6 +1,9 @@
 import React, { useState, useCallback } from 'react'
 import { StyledShareView } from '../styles/Share/StyledShareView'
-import SelectComponent from './SelectComponent'
+import { ShareProvider } from './ShareContext'
+import AddShare from './AddShare'
+import SelectShare from './SelectShare'
+import Navigation from './Navigation'
 
 const ShareView = () => {
   const [state, setState] = useState({
@@ -37,15 +40,21 @@ const ShareView = () => {
         </li>
       </ul>
       
+      <ShareProvider>
       <div role="tabpanel"
            id="panel1"
            aria-hidden={state.tab !== 'panel1'}>
-      <SelectComponent />
+        <AddShare />
+
       </div>
+
       <div role="tabpanel"
            id="panel2"
            aria-hidden={state.tab !== 'panel2'}>
+        <Navigation />
+        <SelectShare />
       </div>
+      </ShareProvider>
     </StyledShareView>
   ) 
 } 

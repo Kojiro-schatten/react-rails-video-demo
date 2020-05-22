@@ -1,10 +1,19 @@
-import React, { Component } from 'react'
-// import Navigation from './Navigation'
+import React from 'react'
+import { ShareProvider } from './ShareContext'
+import SelectShare from './SelectShare'
+import Navigation from './Navigation'
+import AddShare from './AddShare'
 
 const SharedComponent = () => {
-  
   return (
-    <div>Hello</div>
+    <div>
+      <ShareProvider>
+        <div className="shared">
+          <Navigation />
+          <SelectShare />
+        </div>
+      </ShareProvider>
+    </div>
   )
 }
 

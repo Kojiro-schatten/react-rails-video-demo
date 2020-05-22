@@ -28,6 +28,16 @@ textarea {
   height: 100px;
 }
 
+input:focus, textarea:focus {
+  transition: all .2s ease-in;
+  box-shadow: inset -10px 10px 19px #d5d5d5, inset 10px -10px 19px #ffffff;
+}
+
+button:active {
+  transition: all .2s ease-in;
+  box-shadow: inset -10px 10px 19px #d5d5d5, inset 10px -10px 19px #ffffff;
+}
+
 @media screen and (max-width: 768px) {
   input, textarea {
     width: 80%;

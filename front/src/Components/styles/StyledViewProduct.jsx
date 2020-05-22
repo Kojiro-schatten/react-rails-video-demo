@@ -14,6 +14,10 @@ align-items: center;
     margin: 10px 6px;
     border-radius: 12px;
   }
+  button:focus, input:focus, textarea:focus {
+    transition: all .2s ease-in;
+    box-shadow: inset -10px 10px 19px #d5d5d5, inset 10px -10px 19px #ffffff;
+  }
   .deleteButton {
     padding: 4px 24px;
   }

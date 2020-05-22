@@ -7,6 +7,10 @@
   background-color: #F5F5F5;
 }
 
+h1,h2,h3,h4,h5,h6,p,li,div {
+  color: #919191;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
