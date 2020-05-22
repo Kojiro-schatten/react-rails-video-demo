@@ -14,6 +14,8 @@
 
 - 実行
 
+  mysql.server start
+  
   rails s -p 3001
 
   yarn start
