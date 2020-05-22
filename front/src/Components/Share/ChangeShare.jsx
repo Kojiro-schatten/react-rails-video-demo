@@ -1,10 +1,10 @@
 import React from 'react'
 
-const ChangeShare = ({name, price}) => {
+const ChangeShare = ({link, text}) => {
   return (
     <div>
-      <h3>{name}</h3>
-      <p>{price}</p>
+      <a href={link}>{link}</a>
+      <p>{text}</p>
     </div>
   )
 }

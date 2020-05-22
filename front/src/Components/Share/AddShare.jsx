@@ -3,28 +3,28 @@ import { ShareContext } from './ShareContext';
 import {StyledAddShare} from '../styles/Share/StyledAddShare'
 
 const AddShare = () => {
-  const [name, setName] = useState('');
-  const [price, setPrice] = useState('');
+  const [link, setLink] = useState('');
+  const [text, setText] = useState('');
   const [shares, setShares] = useContext(ShareContext)
 
-  const updateName = (e) => {
-    setName(e.target.value)
+  const updateLink = (e) => {
+    setLink(e.target.value)
   }
-  const updatePrice = (e) => {
-    setPrice(e.target.value)
+  const updateText = (e) => {
+    setText(e.target.value)
   }
 
   const addShare = e => {
     e.preventDefault();
-    setShares(prevShares => [...prevShares, { name: name, price: price }])
+    setShares(prevShares => [...prevShares, { link: link, text: text }])
   }
 
   return (
     <StyledAddShare>
 
     <form onSubmit={addShare}>
-      <input type="text" name="name" value={name} onChange={updateName} />
-      <textarea type="text" name="price" value={price} onChange={updatePrice} />
+      <input type="text" link="link" value={link} onChange={updateLink} placeholder="https://www..." />
+      <textarea type="text" name="text" value={text} onChange={updateText} placeholder="What is your opinion?" />
       <button>Submit</button>
     </form>
     </StyledAddShare>

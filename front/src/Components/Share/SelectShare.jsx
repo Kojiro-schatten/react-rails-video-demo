@@ -8,7 +8,7 @@ const SelectShare = () => {
   return (
     <div className="selected">
       {shares.map(share => (
-        <ChangeShare name={share.name} price={share.price} key={share.id} />
+        <ChangeShare link={share.link} text={share.text} key={share.id} />
         ))}
     </div>
   )
